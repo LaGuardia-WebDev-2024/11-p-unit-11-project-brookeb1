@@ -27,14 +27,15 @@ draw=function(){
      textSize(30);
      for(var y = 2; y < reindeerX.length; y++){text("🦌",reindeerX[y],reindeerY[y]);}
      
-     textSize(60);
-     for(var z = 0; z < treeX.length; z++){text("🌲",treeX[z],treeY[z]);
+     drawTrees();
      
      fill(240,185,30)
      var a =0;
      while(x < 400){text("⋆꙳•*⋆꙳•*⋆꙳•*⋆꙳•*⋆꙳•*⋆꙳•*⋆꙳•*•*⋆꙳•*⋆꙳•*⋆꙳•*⋆꙳•*⋆꙳•*v•*⋆꙳•*⋆꙳•*⋆꙳•*⋆꙳•*⋆꙳•*",a,80);x+=20;}
   
-     }
+     
+     
+    
    
    
    fill(255,255,255);
@@ -44,9 +45,15 @@ draw=function(){
 
 //if(mousePressed){snowX.push(mouseX); snowY.push(mouseY);}
 
-}
+};
 
 mouseClicked = function(){
 snowX.push(mouseX); 
 snowY.push(mouseY);
-}
+};
+
+var drawTrees = function(){
+
+textSize(60);
+     for(var z = 0; z < treeX.length; z++){text("🌲",treeX[z],treeY[z]);}
+};
